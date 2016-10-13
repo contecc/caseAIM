@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="caseAIM.CaseDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:caseAIM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel d:IsHidden="False" Margin="30" BorderBrush="White">
+            <Image Margin="5" Width="100" Height="100"  Source="Assets\StoreLogo.png"/>
+            <TextBlock Text="Case Detail" FontSize="25" TextAlignment="Center"></TextBlock>
+            <TextBlock x:Name="caseNameLabel" TextWrapping="Wrap" Text="Case Name"/>
+            <TextBox x:Name="caseName" TextWrapping="Wrap" Text="{Binding SelectedCase.CaseName}" />
+
+            <TextBlock x:Name="caseNumberLabel" TextWrapping="Wrap" Text="Case Number" />
+            <TextBox x:Name="caseNumber" TextWrapping="Wrap" Text="{Binding SelectedCase.CaseNumber}" />
+
+
+            <TextBlock x:Name="goalPrimaryLabel" TextWrapping="Wrap" Text="Goal Primary" />
+            <TextBox x:Name="goalPrimary" TextWrapping="Wrap" Text="{Binding SelectedCase.GoalPrimary}" />
+
+            <TextBlock x:Name="legalStatus1Label" TextWrapping="Wrap" Text="Legal Status (1)" />
+            <TextBox x:Name="legalStatus1" TextWrapping="Wrap" Text="{Binding SelectedCase.LegalStatus1}" />
+
+            <TextBlock x:Name="currentLocationTypeLabel" TextWrapping="Wrap" Text="Current Location Type" />
+            <TextBox x:Name="currentLocationType" TextWrapping="Wrap" Text="{Binding SelectedCase.CurrentLocationType}" />
+
+            <TextBlock x:Name="providerNameLabel" TextWrapping="Wrap" Text="Provider Name" />
+            <TextBox x:Name="providerName" TextWrapping="Wrap" Text="{Binding SelectedCase.ProviderName}" />
+        </StackPanel>
+    </Grid>
+</Page>
